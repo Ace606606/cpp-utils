@@ -1,3 +1,7 @@
+.vscode
+.git
+build_debug
+
 # Prerequisites
 *.d
 
