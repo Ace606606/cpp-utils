@@ -1,12 +1,16 @@
-#include "type_utils.hpp"
+// src/type/type_name.cpp
 
+#include "cpp_utils/type/type_name.hpp"
+
+// for GCC/Clang
 #ifdef __GNUC__
 #include <cxxabi.h>
 
 #include <cstdlib>
 #include <memory>
 
-namespace type_utils {
+namespace cpp_utils {
+namespace type {
 namespace detail {
 
 std::string demangle(const char* name) {
@@ -17,16 +21,19 @@ std::string demangle(const char* name) {
 }
 
 }  // namespace detail
-}  // namespace type_utils
+}  // namespace type
+}  // namespace cpp_utils
 
 #else
-
-namespace type_utils {
+// for not GCC/Clang
+namespace cpp_utils::type {
+namespace type {
 namespace detail {
 
 std::string demangle(const char* name) { return name; }
 
 }  // namespace detail
-}  // namespace type_utils
+}  // namespace type
+}  // namespace cpp_utils::type
 
 #endif

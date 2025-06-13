@@ -1,3 +1,5 @@
+// test/type
+
 #include <cstdlib>
 #include <iostream>
 #include <string>

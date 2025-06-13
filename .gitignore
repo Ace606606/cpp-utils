@@ -1,6 +1,8 @@
 .vscode
 .git
 build_debug
+build_release
+
 
 # Prerequisites
 *.d
